@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
+import styles from './navbar.module.css'
+
 const streetAddress_href = 'https://www.google.com/maps/place/23955+Franz+Rd,+Katy,+TX+77493/@29.8014134,-95.7851712,17z/data=!3m1!4b1!4m5!3m4!1s0x864126f7d56eb2ad:0x67b7d1e350bf3b58!8m2!3d29.8014134!4d-95.7851712'
 const phoneNumber_href = 'tel:2816704030'
 
@@ -23,36 +25,19 @@ const navigationPages = [
 const NavLinks = ({ to, linkName, pathname }: { to: string, linkName: string, pathname: string }) => (
         <Link 
             href={to} 
-            className={`text-green-50 hover:underline hover:underline-offset-4 py-1 text-xl font-semibold ${to === pathname ? 'hidden' : null}`}>
+            className={` text-green-50 transition duration-300 border-b-0 py-1 text-right ${styles.linkUnderline} ${styles.linkUnderlineBlack} font-semibold ${to === pathname ? 'hidden' : null}  `}>
                 {linkName}
         </Link>
     );
 
-
 const MobileNavbar = ({ pathname, open }:  { pathname: string, open: boolean }) => {
     return (
-        <div className={`z-20 w-full pt-4 fixed top-0 bg-amber-500 transform delay-75 ${open ? ' translate-y-0' : '-translate-y-full'} transition-transform duration-300 ease-in-out`}>
-            <div className="flex flex-col w-full">
-                <div className="flex flex-col items-center w-full">
-                    <p className="text-center font-extrabold text-red-700 text-xl">Medrano's Taqueria</p>
-                    <div className="flex flex-col items-center text-xs text-green-900">
-                        <p className="font-extrabold ">Cash Only</p>
-                        <a href={streetAddress_href} target='_blank' rel='noreferrer' className='hover:underline font-bold'>
-                            <address>23955 Franz Rd. Katy, Texas 77493</address>
-                        </a>
-                        <a href={phoneNumber_href}  className='font-bold hover:underline'>
-                            281-670-4030
-                        </a>
-                    </div>
-                </div>
-
-                <ul className="px-5 py-3 flex flex-col items-end bg-green-700/60">
-                    {
-                        navigationPages.map(({ to, linkName }: { to: string, linkName: string }) => <NavLinks key={to} to={to} linkName={linkName} pathname={pathname} /> )
-                    }
-                </ul>
-            </div>
-
+        <div className={`z-20 w-full fixed top-28 border-b-4 border-red-700 bg-amber-500 transform delay-75 ${open ? ' translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
+            <ul className="px-5 py-5 flex flex-col items-end bg-emerald-900">
+                {
+                    navigationPages.map(({ to, linkName }: { to: string, linkName: string }) => <NavLinks key={to} to={to} linkName={linkName} pathname={pathname} /> )
+                }
+            </ul>
         </div>
     );
 }
@@ -63,18 +48,24 @@ export default function Navbar(){
 
     return (
         <>
-            <nav className={`w-full fixed flex justify-between py-4 bg-amber-500`}>
-                <MobileNavbar pathname={pathname} open={open} />
-                <div className="flex flex-col items-center w-full">
-                    <p className="text-center font-extrabold text-red-700 text-xl">Medrano's Taqueria</p>
+            <nav className={`z-50 w-full max-w-full fixed flex justify-between py-4 bg-amber-500`}>
+
+                <div className="flex flex-col items-start px-3 sm:px-10 w-full">
                     <div className="flex flex-col items-center text-xs text-green-900">
-                        <p className="font-extrabold ">Cash Only</p>
-                        <a href={streetAddress_href} target='_blank' rel='noreferrer' className='hover:underline font-bold'>
-                            <address>23955 Franz Rd. Katy, Texas 77493</address>
-                        </a>
-                        <a href={phoneNumber_href}  className='font-bold hover:underline'>
-                            281-670-4030
-                        </a>
+                        <p className="font-extrabold text-red-700 text-lg">Medrano's Taqueria</p>
+                        <p className="font-extrabold text-sm">Cash Only</p>
+                        <div className="flex">
+                            <img src="https://img.icons8.com/officexs/16/null/map-pin.png"/>
+                            <a href={streetAddress_href} target='_blank' rel='noreferrer' className='hover:underline font-bold'>
+                                <address>23955 Franz Rd. Katy, Texas 77493</address>
+                            </a>
+                        </div>
+                        <div className="flex">
+                            <img src="https://img.icons8.com/external-aficons-studio-detailed-outline-aficons-studio/17/null/external-phone-call-food-delivery-aficons-studio-detailed-outline-aficons-studio.png"/>
+                            <a href={phoneNumber_href}  className='font-bold hover:underline'>
+                                281-670-4030
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -92,6 +83,7 @@ export default function Navbar(){
                         <span className={`h-[2px] w-full bg-green-900 rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
                         <span className={`h-[2px] w-full bg-green-900 rounded-lg transform transition duration-300 ease-in-out ${open ? "bg-green-900 -rotate-45 -translate-y-3.5" : ""}`} />
                 </div>
+                <MobileNavbar pathname={pathname} open={open} />
             </nav>
         </>
     );

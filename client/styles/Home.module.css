@@ -1,0 +1,29 @@
+@keyframes swingFromLeft {
+    from {
+        left: -500px;
+        color: transparent;
+    }
+
+    to {
+        left: 3vw;
+        color: white;
+    }
+}
+@-webkit-keyframes swingFromLeft {
+    from {
+        left: -500px;
+    }
+
+    to {
+        left: 3vw;
+    }
+}
+
+.ani {
+    display: inline-block;
+    animation: swingFromLeft 600ms;
+    position: absolute;
+    text-align: left;
+    left: 3vw;
+}
+
