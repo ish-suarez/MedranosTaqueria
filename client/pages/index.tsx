@@ -5,7 +5,40 @@ import Navbar from "../components/navbar"
 
 import styles from '../styles/Home.module.css'
 
-const menuPreview = [ 'Breakfast Tacos', 'Burritos', 'Quesadillas', 'Gorditas', 'Sopes', 'Tortas', 'Huaraches', 'Aguas Frescas' ]
+const menuPreview = [
+  {
+    foodType: 'Breakfast Tacos',
+    foodPic: '/images/taco-plate.jpg'
+  },
+  {
+    foodType: 'Burritos',
+    foodPic: '/images/burrito-mobile.png'
+  },
+  {
+    foodType: 'Quesadillas',
+    foodPic: '/images/quesadillas.jpg'
+  },
+  {
+    foodType: 'Gorditas',
+    foodPic: '/images/gordita.webp'
+  },
+  {
+    foodType: 'Sopes',
+    foodPic: '/images/sopes.jpeg'
+  },
+  {
+    foodType: 'Tortas',
+    foodPic: '/images/tortas.webp'
+  },
+  {
+    foodType: 'Huaraches',
+    foodPic: '/images/huaraches.jpeg'
+  },
+  {
+    foodType: 'Aguas Frescas',
+    foodPic: '/images/aguas-frescas.jpeg'
+  }
+]
 
 export default function Home() {
   return (
@@ -33,9 +66,15 @@ export default function Home() {
                 </div>
             </div>
           </div>
-          <ul className="text-green-100 bg-zinc-900/50 p-2 mt-40 my-2 rounded-md shadow-sm flex flex-wrap justify-center text-sm ">
+          <ul className="text-green-100 w-full bg-zinc-900/50 p-2 mt-40 my-2 rounded-md shadow-sm flex flex-wrap justify-center text-sm ">
             {
-              menuPreview.map(item => <li key={item} className=" w-3/12 my-1 font-light text-center">{item}</li>)
+              menuPreview.map(({foodType, foodPic}: {foodType: string, foodPic: string}) =>(
+                  <li key={foodType} className=" my-1 font-light text-center ">
+                    {foodType}
+                    <Image priority className=" ob" src={foodPic} width={85} height={75} alt={foodType} />
+              
+                  </li>
+              ))
             }
           </ul>
         </div>
