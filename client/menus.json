@@ -1,0 +1,164 @@
+{
+    "restaurantName": "Medranos Taqueria",
+    "location": "23955 Franz Rd. Katy, Texas 77493",
+    "menu": [
+        {
+            "category": "Desayuno / Breakfast",
+            "items": [
+                {
+                    "name": "Papa con Huevo",
+                    "price": null
+                },
+                {
+                    "name": "Chorizo con Huevo",
+                    "price": null
+                },
+                {
+                    "name": "Tocino con Huevo",
+                    "price": null
+                },
+                {
+                    "name": "Fajita con Huevo",
+                    "price": null
+                },
+                {
+                    "name": "Jamon con Huevo",
+                    "price": null
+                }
+            ],
+            "breakfastPlatters": [
+                {
+                    "platterTitle": "Breakfast Platters",
+                    "breakfastPlatesOptions": [
+                        "Huevo Ranchero",
+                        "Chilaquiles Verdes/Rojos"
+                    ]
+                }
+            ] 
+        },
+        {
+            "category": "Tacos y Mas",
+            "tortillaOptions": ["Flour", "Corn"],
+            "tacoMeatOptions": [
+                "Fajita/Beef",
+                "Pollo/Chicken",
+                "Pastor/Pork",
+                "Suadero/Shredded Beef",
+                "Chicharron",
+                "Tripa",
+                "Barbacoa/Cabeza",
+                "Machacado"
+            ],
+            "items": [
+                {
+                    "name": "Quesadilla",
+                    "ingredients": ["Lettuce", "Tomato", "Avocado", "Sour Cream"],
+                    "sizes": [
+                        { "size": "sm", "sizePrice": 6 },
+                        { "size": "xl", "sizePrice": 10 }
+                    ]
+                },
+                {
+                    "name": "Burritos",
+                    "ingredients": ["Lettuce", "Tomato", "Avocado", "Sour Cream"],
+                    "sizes": [
+                        { "size": "sm", "sizePrice": 6 },
+                        { "size": "xl", "sizePrice": 10 }
+                    ]
+                },
+                {
+                    "name": "Huaraches",
+                    "ingredients": ["Lettuce", "Tomato", "Avocado", "Sour Cream", "Queso Freso"],
+                    "sizes": [
+                        { "size": "sm", "sizePrice": 6 },
+                        { "size": "xl", "sizePrice": 10 }
+                    ]
+                },
+                {
+                    "name": "Gorditas",
+                    "ingredients": ["Lettuce", "Tomato", "Avocado", "Sour Cream"],
+                    "price": 5
+                }
+            ],
+            "extras": [
+                {
+                    "extraName": "Avocado",
+                    "price": null
+                },
+                {
+                    "extraName": "Cheese",
+                    "price": null
+                }
+            ]
+            
+        },
+        {
+            "category": "Platillos / Special Platters",
+            "items": [
+                {
+                    "name": "Enchiladas Rojas/Verdes",
+                    "enchiladaMeatOptions": [
+                        {
+                            "enchiladaMeat": "Fajita",
+                            "price": null
+                        },
+                        {
+                            "enchiladaMeat": "Chicken",
+                            "price": null
+                        }
+                    ]
+                },
+                {
+                    "name": "Chicken Fajita",
+                    "price": null
+                },
+                {
+                    "name": "Fajita Steak",
+                    "price": null
+                },
+                {
+                    "name": "Combo Fajita",
+                    "price": null
+                },
+                {
+                    "name": "Flautas",
+                    "price": null
+                }
+            ]
+        },
+        {
+            "category": "Caldos / Soups",
+            "items": [
+                {
+                    "name": "Caldo De Res",
+                    "price": null
+                },
+                {
+                    "name": "Pozole",
+                    "price": null
+                },
+                {
+                    "name": "Menudo",
+                    "price": null
+                }
+            ]
+        },
+        {
+            "category": "Tortas",
+            "items": [
+                {
+                    "name": "Torta Regular",
+                    "price": null
+                },
+                {
+                    "name": "Torta de Chavo",
+                    "price": null
+                },
+                {
+                    "name": "Torta Cubana",
+                    "price": null
+                }
+            ]
+        }
+    ]
+}
