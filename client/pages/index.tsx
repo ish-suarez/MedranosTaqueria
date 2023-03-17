@@ -60,7 +60,7 @@ export default function Home() {
       </div>
       {/* Home page Content */}
       <div className={`flex flex-col items-center ${styles.content}`}>
-        <div className=" mt-[20vh] sm:mt-[15vh] py-10 flex flex-col">
+        <div className=" mt-[20vh] sm:mt-[20vh] py-10 flex flex-col">
           <div className={styles.ani}>
             <div className="flex relative flex-col max-w-md sm:ml-20 xl:ml-40">
                 <h1 className={`text-5xl md:text-6xl lg:text-7xl text-green-50 font-extrabold`}>Street Tacos</h1>

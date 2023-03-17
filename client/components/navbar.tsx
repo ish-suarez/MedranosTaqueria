@@ -70,7 +70,7 @@ export default function Navbar(){
                     </div>
                 </div>
 
-                <ul className="hidden 2xl:mr-20 w-1/5 md:flex justify-around">
+                <ul className="hidden 2xl:mr-20 w-1/5 md:flex md:mr-10 md:w-1/2 justify-around ">
                     {
                         navigationPages.map(({ to, linkName }: { to: string, linkName: string }) => <NavLinks key={to} to={to} linkName={linkName} pathname={pathname} /> )
                     }
