@@ -8,7 +8,7 @@
 }
 
 .linkUnderlineBlack {
-    background-image: linear-gradient(transparent, transparent), linear-gradient(#E1EFE6, #E1EFE6)
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#7ca68a, #E1EFE6)
 }
 
 .linkUnderline:hover {

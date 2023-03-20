@@ -43,7 +43,7 @@ export default function Home() {
         <title>Medrano's Taqueria</title>
         <meta property="og:title" content="Medrano's Taqueria" key="title" />
         <meta name="theme-color" content="#2D3142" />
-        <link rel="preload" as="image" href={backgroundPic as string}></link>
+        <link rel="preload" as="image" href={backgroundPic}></link>
       </Head>
       {/* Background Image Container */}
       <div className={` fixed -z-10 w-full h-screen`}>
@@ -61,8 +61,8 @@ export default function Home() {
       {/* Home page Content */}
       <div className={`flex flex-col items-center ${styles.content}`}>
         <div className=" mt-[20vh] sm:mt-[20vh] py-10 flex flex-col">
-          <div className={styles.ani}>
-            <div className="flex relative flex-col max-w-md sm:ml-20 xl:ml-40">
+          <div className={`${styles.ani}`}>
+            <div className="flex relative flex-col max-w-md sm:ml-20 xl:max-w-2xl xl:ml-40">
                 <h1 className={`text-5xl md:text-6xl lg:text-7xl text-green-50 font-extrabold`}>Street Tacos</h1>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl ml-14 text-green-50 font-extrabold">Y mucho mas</h2>
                 <div className="flex relative ml-24 w-64 md:w-full text-center space-x-2 my-3 text-lg md:text-xl lg:text-2xl font-bold text-green-50">
@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
             </div>
           </div>
-          <ul className="text-green-100 w-full list-disc list-inside bg-zinc-900/50 p-2 mt-40 my-2 shadow-sm flex flex-wrap justify-center text-sm 
+          <ul className="text-green-100 w-full list-disc list-inside bg-zinc-900/50 xl:bg-transparent p-2 mt-40 my-2 shadow-sm flex flex-wrap justify-center text-sm 
                           sm:px-20 sm:py-5 
                           md:mt-48
                           lg:px-36 lg:mt-56
@@ -79,7 +79,7 @@ export default function Home() {
             {
               menuPreview.map(({foodType}: {foodType: string}, i) => (
                   <li key={foodType as string} className=" my-1 font-semibold md:text-lg lg:text-xl text-center mx-1">
-                    {foodType as string}
+                    {foodType}
                   </li>
               ))
             }

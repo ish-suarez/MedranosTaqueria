@@ -25,7 +25,7 @@ const navigationPages = [
 const NavLinks = ({ to, linkName, pathname }: { to: string, linkName: string, pathname: string }) => (
         <Link 
             href={to} 
-            className={`md:text-lg text-green-50 md:text-green-900 transition h-min duration-300 border-b-0 py-1 text-right ${styles.linkUnderline} ${styles.linkUnderlineBlack} font-semibold ${to === pathname ? 'hidden' : null}  `}>
+            className={`md:text-lg  transition h-min duration-300 border-b-0 py-1 text-right ${styles.linkUnderline} ${styles.linkUnderlineBlack} font-semibold ${to === pathname ? 'hidden' : null}  `}>
                 {linkName}
         </Link>
     );
@@ -48,12 +48,12 @@ export default function Navbar(){
 
     return (
         <>
-            <nav className={`z-50 w-full max-w-full fixed flex justify-between py-5 bg-amber-500 lg:px-20`}>
+            <nav className={`z-50 w-full max-w-full fixed flex justify-between py-5 backdrop-blur-md ${pathname === '/Menu' ? '!text-neutral-700 ' : 'text-green-50'}`}>
 
                 <div className="flex flex-col items-start px-3 sm:px-10 w-full">
-                    <div className="flex flex-col items-center text-xs text-green-900">
+                    <div className="flex flex-col items-center text-xs">
                         <Link href={'/'}>
-                            <p className="font-extrabold text-red-700 text-xl md:text-2xl lg:text-2xl transition delay-75 hover:scale-110">Medrano's Taqueria</p>
+                            <p className="font-extrabold text-xl md:text-2xl lg:text-2xl transition delay-75 hover:scale-110">Medrano's Taqueria</p>
                         </Link>
                         <div className="flex">
                             <img className="px-1 lg:p-1 lg:w-[32px]" src="https://img.icons8.com/officexs/16/null/map-pin.png"/>
@@ -62,7 +62,7 @@ export default function Navbar(){
                             </a>
                         </div>
                         <div className="flex xl:text-lg">
-                            <img className="px-1 lg:w-[28px]" src="https://img.icons8.com/external-aficons-studio-detailed-outline-aficons-studio/17/null/external-phone-call-food-delivery-aficons-studio-detailed-outline-aficons-studio.png"/>
+                            <img className="px-1 lg:w-[28px]" src="https://img.icons8.com/external-aficons-studio-detailed-outline-aficons-studio/17/FFFFFF/external-phone-call-food-delivery-aficons-studio-detailed-outline-aficons-studio.png"/>
                             <a href={phoneNumber_href}  className='font-bold hover:underline'>
                                 281-670-4030
                             </a>
@@ -70,7 +70,7 @@ export default function Navbar(){
                     </div>
                 </div>
 
-                <ul className="hidden 2xl:mr-20 w-1/5 md:flex md:mr-10 md:w-1/2 justify-around ">
+                <ul className="hidden  w-1/5 md:flex md:mr-10 md:w-1/2 max-w-xl lg:max-w-md justify-around 2xl:mr-0">
                     {
                         navigationPages.map(({ to, linkName }: { to: string, linkName: string }) => <NavLinks key={to} to={to} linkName={linkName} pathname={pathname} /> )
                     }
@@ -80,9 +80,9 @@ export default function Navbar(){
                         setOpen(!open)
                     }}>
                         {/* hamburger button */}
-                        <span className={`h-[2px] w-full bg-green-900 rounded-lg transform transition duration-300 ease-in-out ${open ? " bg-green-900 rotate-45 translate-y-3.5" : ""}`} />
-                        <span className={`h-[2px] w-full bg-green-900 rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
-                        <span className={`h-[2px] w-full bg-green-900 rounded-lg transform transition duration-300 ease-in-out ${open ? "bg-green-900 -rotate-45 -translate-y-3.5" : ""}`} />
+                        <span className={`h-[2px] w-full bg-green-50 rounded-lg transform transition duration-300 ease-in-out ${open ? " bg-green-50 rotate-45 translate-y-3.5" : ""}`} />
+                        <span className={`h-[2px] w-full bg-green-50 rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
+                        <span className={`h-[2px] w-full bg-green-50 rounded-lg transform transition duration-300 ease-in-out ${open ? "bg-green-50 -rotate-45 -translate-y-3.5" : ""}`} />
                 </div>
                 <MobileNavbar pathname={pathname} open={open} />
             </nav>
