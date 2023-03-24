@@ -1,6 +1,6 @@
 export default function Footer () {
     return(
-        <footer className=" flex flex-col justify-center py-10 text-center">
+        <footer className="flex flex-col justify-center py-10 text-center">
             <p className="text-sm text-gray-200">
                 Designed by <a className="text-white hover:text-gray-300" href="https://izzydev.com" target={'_blank'} rel={'noreferrer'}>izzydev.com</a>
             </p>

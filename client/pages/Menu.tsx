@@ -1,8 +1,6 @@
-import { useState } from "react";
 import Image from "next/image";
 import { getMenu } from '../lib/menuData'
-import { breakfastProps, tacosProps, platterProps, menuProps } from "../lib/interface";
-
+import { menuProps } from "../lib/interface";
 
 export async function getStaticProps() {
     const menu = getMenu();
@@ -24,7 +22,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
             <div className="fixed z-0 w-full h-screen">
                 <Image 
                     src={'/images/menu_back.avif'} 
-                    className='object-cover brightness-90' 
+                    className='object-cover brightness-90 md:object-fill' 
                     fill 
                     alt="background picture"
                 />

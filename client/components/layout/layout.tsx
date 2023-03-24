@@ -7,16 +7,16 @@ type Props = {
     title?: string
 }
 
-export default function Layout({children, title='Medranos'}: Props) {
+export default function Layout({children, title='Medranos Taqueria'}: Props) {
     return (
-        <>
+        <div className="w-full">
             <Head>
                 <title>{title}</title>
             </Head>
             <Navbar />
-            <main>
+            <main className="w-full">
                 {children}
             </main>
-        </>
+        </div>
     )
 }

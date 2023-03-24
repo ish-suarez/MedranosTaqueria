@@ -5,7 +5,7 @@ import Navbar from "../components/navbar"
 import Footer from "../components/Footer"
 import styles from '../styles/Home.module.css'
 
-const backgroundPic = '/images/taco_truck.jpeg'
+const backgroundPic = '/images/taco_truck.jpeg';
 
 const menuPreview = [
   {
@@ -34,7 +34,7 @@ const menuPreview = [
   }
 ]
 
-const homePhotos = [{image: '/images/tacos.jpg', alternate: 'taco plate'}, {image: '/images/burrito.jpg', alternate: 'burrito'} , {image: '/images/quesadillas.jpg', alternate: 'quesadilla'}, {image: '/images/sopes.jpeg', alternate: 'sopes'}]
+const homePhotos = [{image: '/images/tacos.jpg', alternate: 'taco plate'}, {image: '/images/burrito.jpg', alternate: 'plate of burritos'} , {image: '/images/quesadillas.jpg', alternate: 'plate of quesadilla'}, {image: '/images/sopes.jpeg', alternate: 'plate of sopes'}]
 
 export default function Home() {
   return (
@@ -49,7 +49,7 @@ export default function Home() {
       <div className={` fixed -z-10 w-full h-screen`}>
         <Image
           priority
-          className=" opacity-95 brightness-50 blur-[2px] object-cover"
+          className=" opacity-95 brightness-50 blur-[2px] object-cover md:object-fill"
           src={backgroundPic as string}
           quality={100}
           fill
@@ -85,10 +85,10 @@ export default function Home() {
             }
           </ul>
         </div>
-        <div className="flex justify-center flex-wrap w-full max-w-sm sm:max-w-lg py-10">
+        <div className="flex justify-center flex-wrap w-full max-w-sm sm:max-w-xl md:max-w-2xl py-10">
           {homePhotos.map(({image, alternate}: {image: string, alternate: string}, i) => (
-            <div key={i} className=" overflow-hidden sm:h-40 sm:w-2/4 ">
-              <Image loading="lazy" src={image as string} width={270} height={200} alt={alternate} />
+            <div key={i} className=" overflow-hidden sm:h-44 sm:w-1/2 md:h-52 md:w-1/2">
+              <Image loading="lazy" src={image as string} width={370} height={200} alt={alternate} />
             </div>
           ) 
           )}
