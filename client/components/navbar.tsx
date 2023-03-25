@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import styles from './navbar.module.css'
 
-const streetAddress_href = 'https://www.google.com/maps/place/23955+Franz+Rd,+Katy,+TX+77493/@29.8014134,-95.7851712,17z/data=!3m1!4b1!4m5!3m4!1s0x864126f7d56eb2ad:0x67b7d1e350bf3b58!8m2!3d29.8014134!4d-95.7851712'
+const streetAddress_href = 'https://maps.apple.com/?address=23955%20Franz%20Rd,%20Katy,%20TX%20%2077493,%20United%20States&ll=29.801458,-95.785186&q=23955%20Franz%20Rd&_ext=EiYp9Esf9wXMPUAxKZxXS5XyV8A58PZqr1LOPUBB48YOr+vxV8BQBA%3D%3D'
 const phoneNumber_href = 'tel:2816704030'
 
 const navigationPages = [
@@ -26,7 +26,7 @@ const navigationPages = [
 const NavLinks = ({ to, linkName, pathname }: { to: string, linkName: string, pathname: string }) => (
         <Link 
             href={to} 
-            className={`md:text-lg  transition h-min duration-300 border-b-0 py-1 text-right ${styles.linkUnderline} ${styles.linkUnderlineBlack} font-semibold ${to === pathname ? 'hidden' : null}  `}>
+            className={`md:text-lg  transition h-min duration-300 border-b-0 py-1 text-right md:text-center w-20 ${styles.linkUnderline} ${styles.linkUnderlineBlack} font-semibold ${to === pathname ? 'hidden' : null}  `}>
                 {linkName}
         </Link>
     );
@@ -55,13 +55,13 @@ export default function Navbar(){
                         <Link href={'/'}>
                             <p className="font-extrabold text-xl lg:text-xl transition delay-75 hover:scale-110">Medrano's Taqueria</p>
                         </Link>
-                        <div className="flex">
+                        <div className="flex transition delay-75">
                             <img className="px-1 lg:p-1 " src="https://img.icons8.com/officexs/16/null/map-pin.png"/>
                             <a href={streetAddress_href} target='_blank' rel='noreferrer' className='hover:underline font-bold'>
                                 <address>23955 Franz Rd. Katy, Texas 77493</address>
                             </a>
                         </div>
-                        <div className="flex">
+                        <div className="flex transition delay-75">
                             <img className="px-1" src="https://img.icons8.com/external-aficons-studio-detailed-outline-aficons-studio/17/FFFFFF/external-phone-call-food-delivery-aficons-studio-detailed-outline-aficons-studio.png"/>
                             <a href={phoneNumber_href}  className='font-bold hover:underline'>
                                 281-670-4030
@@ -70,7 +70,7 @@ export default function Navbar(){
                     </div>
                 </div>
 
-                <div className="absolute flex flex-col items-center left-64 sm:left-72">
+                <div className="absolute flex flex-col items-center left-64 sm:left-72 transition delay-75">
                     <p>Cash Only</p>
                     <p className="text-3xl">💵</p>
                 </div>
