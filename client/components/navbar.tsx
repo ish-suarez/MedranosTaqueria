@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import path from "path";
 import { SetStateAction, useState, Dispatch } from "react";
 
 import styles from './navbar.module.css'
@@ -79,7 +78,7 @@ export default function Navbar(){
                 <div className=" backdrop-blur-md mr-2 absolute right-3">
                     <ul className="hidden md:flex md:backdrop-blur-md justify-around space-x-4">
                         {
-                            navigationPages.map(( { to, linkName }: { to: string, linkName: string}) => <NavLinks key={to} to={to} linkName={linkName} pathname={pathname} /> )
+                            navigationPages.map(( { to, linkName }: { to: string, linkName: string}) => <NavLinks key={to} open={open} setOpen={setOpen} to={to} linkName={linkName} pathname={pathname} /> )
                         }
                     </ul>
                 </div>
