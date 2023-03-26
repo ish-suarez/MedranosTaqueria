@@ -22,7 +22,7 @@ const navigationPages = [
     }
 ]
 
-const NavLinks = ({ to, linkName, pathname, open, setOpen }: { to: string, linkName: string, pathname: string, open: boolean, setOpen: Dispatch<SetStateAction<boolean>> }) => (
+const NavLinks = ({ to, linkName, pathname, setOpen }: { to: string, linkName: string, pathname: string, setOpen: Dispatch<SetStateAction<boolean>> }) => (
         <Link 
             href={to} 
             onClick={() => setOpen(prevState => !prevState)}
@@ -36,7 +36,7 @@ const MobileNavbar = ({ pathname, open, setOpen }:  { pathname: string, open: bo
         <div className={`md:hidden z-20 w-full fixed top-24 border-b-4 ${pathname === '/Menu' ? 'border-teal-700/30' : 'border-red-700'} transform delay-75 ${open ? ' translate-x-0' : '-translate-x-full lg:hidden'} transition-transform duration-300 ease-in-out`}>
             <ul className={`px-5 py-5 flex flex-col items-end ${pathname === '/Menu' ? 'bg-[#F3CA89]/60 backdrop-blur-sm' : 'bg-emerald-900'} `}>
                 {
-                    navigationPages.map(({ to, linkName }: { to: string, linkName: string}) => <NavLinks key={to} open={open} setOpen={setOpen} to={to} linkName={linkName} pathname={pathname} /> )
+                    navigationPages.map(({ to, linkName }: { to: string, linkName: string}) => <NavLinks key={to} setOpen={setOpen} to={to} linkName={linkName} pathname={pathname} /> )
                 }
             </ul>
         </div>
@@ -78,7 +78,7 @@ export default function Navbar(){
                 <div className=" backdrop-blur-md mr-2 absolute right-3">
                     <ul className="hidden md:flex md:backdrop-blur-md justify-around space-x-4">
                         {
-                            navigationPages.map(( { to, linkName }: { to: string, linkName: string}) => <NavLinks key={to} open={open} setOpen={setOpen} to={to} linkName={linkName} pathname={pathname} /> )
+                            navigationPages.map(({ to, linkName }: { to: string, linkName: string}) => <NavLinks key={to} setOpen={setOpen} to={to} linkName={linkName} pathname={pathname} /> )
                         }
                     </ul>
                 </div>
