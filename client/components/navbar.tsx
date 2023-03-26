@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import path from "path";
-import { useState } from "react";
+import { SetStateAction, useState, Dispatch } from "react";
 
 import styles from './navbar.module.css'
 
@@ -23,20 +23,21 @@ const navigationPages = [
     }
 ]
 
-const NavLinks = ({ to, linkName, pathname }: { to: string, linkName: string, pathname: string }) => (
+const NavLinks = ({ to, linkName, pathname, open, setOpen }: { to: string, linkName: string, pathname: string, open: boolean, setOpen: Dispatch<SetStateAction<boolean>> }) => (
         <Link 
             href={to} 
+            onClick={() => setOpen(prevState => !prevState)}
             className={`md:text-lg  transition h-min duration-300 border-b-0 py-1 text-right md:text-center w-20 ${styles.linkUnderline} ${styles.linkUnderlineBlack} font-semibold ${to === pathname ? 'hidden' : null}  `}>
                 {linkName}
         </Link>
     );
 
-const MobileNavbar = ({ pathname, open }:  { pathname: string, open: boolean }) => {
+const MobileNavbar = ({ pathname, open, setOpen }:  { pathname: string, open: boolean, setOpen: Dispatch<SetStateAction<boolean>> }) => {
     return (
         <div className={`z-20 w-full fixed top-24 border-b-4 ${pathname === '/Menu' ? 'border-teal-700/30' : 'border-red-700'} transform delay-75 ${open ? ' translate-x-0' : '-translate-x-full lg:hidden'} transition-transform duration-300 ease-in-out`}>
             <ul className={`px-5 py-5 flex flex-col items-end ${pathname === '/Menu' ? 'bg-[#F3CA89]/60 backdrop-blur-sm' : 'bg-emerald-900'} `}>
                 {
-                    navigationPages.map(({ to, linkName }: { to: string, linkName: string }) => <NavLinks key={to} to={to} linkName={linkName} pathname={pathname} /> )
+                    navigationPages.map(({ to, linkName }: { to: string, linkName: string}) => <NavLinks key={to} open={open} setOpen={setOpen} to={to} linkName={linkName} pathname={pathname} /> )
                 }
             </ul>
         </div>
@@ -78,7 +79,7 @@ export default function Navbar(){
                 <div className=" backdrop-blur-md mr-2 absolute right-3">
                     <ul className="hidden md:flex md:backdrop-blur-md justify-around space-x-4">
                         {
-                            navigationPages.map(({ to, linkName }: { to: string, linkName: string }) => <NavLinks key={to} to={to} linkName={linkName} pathname={pathname} /> )
+                            navigationPages.map(( { to, linkName }: { to: string, linkName: string}) => <NavLinks key={to} to={to} linkName={linkName} pathname={pathname} /> )
                         }
                     </ul>
                 </div>
@@ -92,7 +93,7 @@ export default function Navbar(){
                         <span className={`h-[2px] w-full ${pathname === '/Menu' ? 'bg-neutral-600' : 'bg-green-50 rounded-lg'} transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
                         <span className={`h-[2px] w-full ${pathname === '/Menu' ? 'bg-neutral-600' : 'bg-green-50 rounded-lg'} transform transition duration-300 ease-in-out ${(open || open && pathname === '/Menu') ? "bg-neutral-600 -rotate-45 -translate-y-3.5" : null}`} />
                 </div>
-                <MobileNavbar pathname={pathname} open={open} />
+                <MobileNavbar pathname={pathname} open={open} setOpen={setOpen} />
             </nav>
     );
 }
