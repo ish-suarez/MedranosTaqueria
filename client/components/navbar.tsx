@@ -70,7 +70,7 @@ export default function Navbar(){
                     </div>
                 </div>
 
-                <div className="absolute flex flex-col items-center left-64 sm:left-72 transition delay-75">
+                <div className="absolute flex flex-col items-center left-60 sm:left-72 transition delay-75">
                     <p>Cash Only</p>
                     <p className="text-3xl">💵</p>
                 </div>
