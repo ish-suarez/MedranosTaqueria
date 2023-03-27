@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from 'next/head';
 import { getMenu } from '../lib/menuData'
 import { menuProps } from "../lib/interface";
 
@@ -18,6 +19,10 @@ export default function Menu({menu}: {menu: Array<any>}) {
     
     return (
         <div>
+            <Head>
+                <title>Medrano's Menu</title>
+                <meta property="og:title" content="Medrano's Menu" key='title' />
+            </Head>
             {/* Background Image Container */}
             <div className="fixed z-0 w-full h-screen">
                 <Image 
