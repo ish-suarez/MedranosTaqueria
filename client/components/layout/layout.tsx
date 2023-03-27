@@ -9,7 +9,7 @@ type Props = {
 
 export default function Layout({children, title='Medranos Taqueria'}: Props) {
     return (
-        <div className="w-full">
+        <div className="w-full subpixel-antialiased">
             <Head>
                 <title>{title}</title>
             </Head>

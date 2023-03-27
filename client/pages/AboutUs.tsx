@@ -1,11 +1,16 @@
 import Image from "next/image"
+import Head from "next/head"
 import Footer from "../components/Footer"
-const backgroundPic = '/images/taco_truck.jpeg'
+const backgroundPic = '/images/taco_truck.avif'
 
 
 export default function AboutUs() {
     return (
         <div className=" w-full">
+            <Head>
+                <title>About Medrano's Taqueria</title>
+                <link rel="preload" as="image" href={backgroundPic}></link>
+            </Head>
                   {/* Background Image Container */}
             <div className={` fixed -z-10 w-full h-screen`}>
                 <Image
@@ -37,7 +42,7 @@ export default function AboutUs() {
                         </div>
                     </section>
                     <section className=" w-full flex justify-center items-center 2xl:w-2/ 2xl:justify-end">
-                        <Image className="shadow-lg shadow-neutral-50/30 sm:rounded-b-md sm:max-w-xl 2xl:max-w-2xl  md:rounded-b-md" loading='lazy' src={backgroundPic} height={950} width={950} alt='taco truck in parking lot' />
+                        <Image className="shadow-lg shadow-neutral-50/30 sm:rounded-b-md sm:max-w-xl 2xl:max-w-2xl  md:rounded-b-md" priority src={backgroundPic} height={950} width={950} alt='taco truck in parking lot' />
                     </section>
 
                 </div>

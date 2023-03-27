@@ -5,7 +5,7 @@ import Navbar from "../components/navbar"
 import Footer from "../components/Footer"
 import styles from '../styles/Home.module.css'
 
-const backgroundPic = '/images/taco_truck.jpeg';
+const backgroundPic = '/images/taco_truck.avif';
 
 const menuPreview = [
   {
@@ -34,7 +34,7 @@ const menuPreview = [
   }
 ]
 
-const homePhotos = [{image: '/images/tacos.jpg', alternate: 'taco plate'}, {image: '/images/burrito.jpg', alternate: 'plate of burritos'} , {image: '/images/quesadillas.jpg', alternate: 'plate of quesadilla'}, {image: '/images/sopes.jpeg', alternate: 'plate of sopes'}]
+const homePhotos = [{image: '/images/tacos.avif', alternate: 'taco plate'}, {image: '/images/burrito.avif', alternate: 'plate of burritos'} , {image: '/images/quesadillas.avif', alternate: 'plate of quesadilla'}, {image: '/images/sopes.avif', alternate: 'plate of sopes'}]
 
 export default function Home() {
   return (
@@ -85,6 +85,7 @@ export default function Home() {
             }
           </ul>
         </div>
+        {/* Images Section */}
         <div className="flex justify-center flex-wrap w-full max-w-sm sm:max-w-xl md:max-w-2xl py-10">
           {homePhotos.map(({image, alternate}: {image: string, alternate: string}, i) => (
             <div key={i} className=" overflow-hidden sm:h-44 sm:w-1/2 md:h-52 md:w-1/2">

@@ -26,15 +26,15 @@ const NavLinks = ({ to, linkName, pathname, setOpen }: { to: string, linkName: s
         <Link 
             href={to} 
             onClick={() => setOpen(prevState => !prevState)}
-            className={`md:text-lg  transition h-min duration-300 border-b-0 py-1 text-right md:text-center w-20 ${styles.linkUnderline} ${styles.linkUnderlineBlack} font-semibold ${to === pathname ? 'hidden' : null}  `}>
+            className={`md:text-lg text-center transition h-min duration-300 border-b-0 py-1 md:text-center w-20 ${styles.linkUnderline} ${styles.linkUnderlineBlack} font-semibold ${to === pathname ? 'hidden' : null}  `}>
                 {linkName}
         </Link>
     );
 
 const MobileNavbar = ({ pathname, open, setOpen }:  { pathname: string, open: boolean, setOpen: Dispatch<SetStateAction<boolean>> }) => {
     return (
-        <div className={`md:hidden z-20 w-full fixed top-24 border-b-4 ${pathname === '/Menu' ? 'border-teal-700/30' : 'border-red-700'} transform delay-75 ${open ? ' translate-x-0' : '-translate-x-full lg:hidden'} transition-transform duration-300 ease-in-out`}>
-            <ul className={`px-5 py-5 flex flex-col items-end ${pathname === '/Menu' ? 'bg-[#F3CA89]/60 backdrop-blur-sm' : 'bg-emerald-900'} `}>
+        <div className={`md:hidden z-20 w-full fixed top-24 border-b-4 border-red-700 transform delay-75 ${open ? ' translate-x-0' : '-translate-x-full lg:hidden'} transition-transform duration-300 ease-in-out`}>
+            <ul className={`px-5 py-5 flex flex-col items-end  bg-emerald-900 `}>
                 {
                     navigationPages.map(({ to, linkName }: { to: string, linkName: string, open?: boolean; setOpen?: Dispatch<SetStateAction<boolean>>}) => <NavLinks key={to} setOpen={setOpen} to={to} linkName={linkName} pathname={pathname} /> )
                 }
@@ -48,7 +48,7 @@ export default function Navbar(){
     const {pathname} = useRouter();
 
     return (
-            <nav className={`z-50 w-screen fixed flex justify-between py-5 backdrop-blur-md ${pathname === '/Menu' ? '!text-neutral-700 ' : 'text-green-50'}`}>
+            <nav className={`z-50 w-screen fixed flex justify-between py-5 backdrop-blur-md text-green-50`}>
 
                 <div className="flex flex-col items-start px-3 sm:px-10">
                     <div className="flex flex-col items-center text-xs">
@@ -88,9 +88,9 @@ export default function Navbar(){
                         setOpen(!open)
                     }}>
                         {/* hamburger button */}
-                        <span className={`h-[2px] w-full ${pathname === '/Menu' ? 'bg-neutral-600' : 'bg-green-50 rounded-lg'} transform transition duration-300 ease-in-out ${(open || open && pathname === '/Menu') ? " bg-neutral-600 rotate-45 translate-y-3.5" : null}`} />
-                        <span className={`h-[2px] w-full ${pathname === '/Menu' ? 'bg-neutral-600' : 'bg-green-50 rounded-lg'} transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
-                        <span className={`h-[2px] w-full ${pathname === '/Menu' ? 'bg-neutral-600' : 'bg-green-50 rounded-lg'} transform transition duration-300 ease-in-out ${(open || open && pathname === '/Menu') ? "bg-neutral-600 -rotate-45 -translate-y-3.5" : null}`} />
+                        <span className={`h-[2px] w-full bg-green-50 rounded-lg transform transition duration-300 ease-in-out ${open  ? " bg-neutral-50 rotate-45 translate-y-3.5" : null}`} />
+                        <span className={`h-[2px] w-full bg-green-50 rounded-lg transition-all duration-300 ease-in-out ${open ? "w-0" : "w-full"}`} />
+                        <span className={`h-[2px] w-full bg-green-50 rounded-lg transform transition duration-300 ease-in-out ${open  ? "bg-neutral-50 -rotate-45 -translate-y-3.5" : null}`} />
                 </div>
                 <MobileNavbar pathname={pathname} open={open} setOpen={setOpen} />
             </nav>
