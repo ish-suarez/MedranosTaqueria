@@ -56,13 +56,13 @@ export default function Navbar(){
                             <p className="font-extrabold text-xl lg:text-xl transition delay-75 hover:scale-110">Medrano's Taqueria</p>
                         </Link>
                         <div className="flex transition delay-75">
-                            <img className="px-1 lg:p-1 " src="https://img.icons8.com/officexs/16/null/map-pin.png"/>
-                            <a href={streetAddress_href} target='_blank' rel='noreferrer' className='hover:underline font-bold'>
+                            <p className="px-1 text-md">📍</p>
+                            <a href={streetAddress_href} target='_blank' rel='noreferrer' className='hover:underline font-bold'> 
                                 <address>23955 Franz Rd. Katy, Texas 77493</address>
                             </a>
                         </div>
                         <div className="flex transition delay-75">
-                            <img className="px-1" src="https://img.icons8.com/external-aficons-studio-detailed-outline-aficons-studio/17/FFFFFF/external-phone-call-food-delivery-aficons-studio-detailed-outline-aficons-studio.png"/>
+                            <p className="px-1">📞</p>
                             <a href={phoneNumber_href}  className='font-bold hover:underline'>
                                 281-670-4030
                             </a>

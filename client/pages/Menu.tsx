@@ -5,7 +5,6 @@ import { menuProps } from "../lib/interface";
 
 export async function getStaticProps() {
     const menu = getMenu();
-
     return { props: menu }
 }
 
@@ -30,7 +29,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
                 <Image 
                     priority
                     src={'/images/taco_truck.avif'} 
-                    className='object-cover brightness-[.37] md:object-fill' 
+                    className='object-cover brightness-[.35] md:object-fill blur-md' 
                     fill 
                     alt="background picture"
                 />

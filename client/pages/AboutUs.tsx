@@ -15,7 +15,7 @@ export default function AboutUs() {
             <div className={` fixed -z-10 w-full h-screen`}>
                 <Image
                 priority
-                className=" opacity-95 brightness-50 blur-[2px] object-cover md:object-fill"
+                className=" opacity-95 brightness-50 blur-md object-cover md:object-fill"
                 src={backgroundPic as string}
                 quality={100}
                 fill

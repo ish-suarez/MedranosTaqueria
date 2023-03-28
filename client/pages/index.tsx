@@ -1,40 +1,11 @@
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
 import Head from 'next/head'
 import Link from "next/link"
-import Navbar from "../components/navbar"
 import Footer from "../components/Footer"
 import styles from '../styles/Home.module.css'
+import {menuPreview, homePhotos} from '../lib/menuData'
 
 const backgroundPic = '/images/taco_truck.avif';
-
-const menuPreview = [
-  {
-    foodType: 'Breakfast Tacos'
-  },
-  {
-    foodType: 'Burritos'
-  },
-  {
-    foodType: 'Quesadillas'
-  },
-  {
-    foodType: 'Gorditas'
-  },
-  {
-    foodType: 'Sopes'
-  },
-  {
-    foodType: 'Tortas'
-  },
-  {
-    foodType: 'Huaraches'
-  },
-  {
-    foodType: 'Aguas Frescas'
-  }
-]
-
-const homePhotos = [{image: '/images/tacos.avif', alternate: 'taco plate'}, {image: '/images/burrito.avif', alternate: 'plate of burritos'} , {image: '/images/quesadillas.avif', alternate: 'plate of quesadilla'}, {image: '/images/sopes.avif', alternate: 'plate of sopes'}]
 
 export default function Home() {
   return (
@@ -49,7 +20,7 @@ export default function Home() {
       <div className={` fixed -z-10 w-full h-screen`}>
         <Image
           priority
-          className=" opacity-95 brightness-50 blur-[2px] object-cover md:object-fill"
+          className=" opacity-95 brightness-50 blur-md object-cover md:object-fill"
           src={backgroundPic as string}
           quality={100}
           fill
@@ -66,8 +37,8 @@ export default function Home() {
                 <h1 className={`text-5xl md:text-6xl lg:text-7xl text-green-50 font-extrabold`}>Street Tacos</h1>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl ml-14 text-green-50 font-extrabold">Y mucho mas</h2>
                 <div className="flex relative ml-24 w-64 md:w-full text-center space-x-2 my-3 text-lg md:text-xl lg:text-2xl font-bold text-green-50">
-                  <Link href={'/Menu'} className="absolute left-0 bg-emerald-800 border-r-2 border-b-2 border-green-100 rounded cursor-pointer transform duration-100 hover:scale-110 hover:z-10 hover:border-none hover:shadow hover:shadow-white py-2 w-1/2">See our menu</Link>
-                  <Link href={'/AboutUs'} className="absolute right-0 bg-amber-500 border-r-2 border-b-2 border-amber-100 text-green-900 rounded cursor-pointer transform duration-100 hover:scale-110 hover:border-none hover:shadow hover:shadow-white hover:z-10 py-2 w-1/2">About us</Link>
+                  <Link href={'/Menu'} className="absolute left-0 bg-emerald-800 border-r-2 border-b-2 border-green-50 rounded cursor-pointer transform duration-100 hover:scale-110 hover:z-10 hover:border-none hover:shadow hover:shadow-white py-2 w-1/2">See our menu</Link>
+                  <Link href={'/AboutUs'} className="absolute right-0 bg-amber-500 border-r-2 border-b-2 border-amber-100 text-neutral-600 rounded cursor-pointer transform duration-100 hover:scale-110 hover:border-none hover:shadow hover:shadow-white hover:z-10 py-2 w-1/2">About us</Link>
                 </div>
             </div>
           </div>
@@ -89,7 +60,7 @@ export default function Home() {
         <div className="flex justify-center flex-wrap w-full max-w-sm sm:max-w-xl md:max-w-2xl py-10">
           {homePhotos.map(({image, alternate}: {image: string, alternate: string}, i) => (
             <div key={i} className=" overflow-hidden sm:h-44 sm:w-1/2 md:h-52 md:w-1/2">
-              <Image loading="lazy" src={image as string} width={370} height={200} alt={alternate} />
+              <Image priority src={image as string} width={370} height={200} alt={alternate} />
             </div>
           ) 
           )}

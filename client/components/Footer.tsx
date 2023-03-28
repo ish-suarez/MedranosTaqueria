@@ -2,7 +2,7 @@ export default function Footer () {
     return(
         <footer className="flex flex-col justify-center py-10 text-center">
             <a className="self-center w-1/5 transition delay-100 hover:scale-110" target={'_blank'} rel={'noreferrer'} href="https://www.facebook.com/TaqueriaMedrano">
-                <img className="" src="https://img.icons8.com/color/48/null/facebook-new.png" alt="Facebook logo"/>
+                <img className="" width={25} height={25} src="https://img.icons8.com/color/48/null/facebook-new.png" alt="Facebook logo"/>
 
             </a>
             <div>
