@@ -34,11 +34,11 @@ const NavLinks = ({ to, linkName, pathname, setOpen }: { to: string, linkName: s
 const MobileNavbar = ({ pathname, open, setOpen }:  { pathname: string, open: boolean, setOpen: Dispatch<SetStateAction<boolean>> }) => {
     return (
         <div className={`md:hidden z-20 w-full fixed top-24 border-b-4 border-red-700 transform delay-75 ${open ? ' translate-x-0' : '-translate-x-full lg:hidden'} transition-transform duration-300 ease-in-out`}>
-            <ul className={`px-5 py-5 flex flex-col items-end  bg-emerald-900 `}>
+            <div className={`px-5 py-5 flex flex-col items-end  bg-emerald-900 `}>
                 {
                     navigationPages.map(({ to, linkName }: { to: string, linkName: string, open?: boolean; setOpen?: Dispatch<SetStateAction<boolean>>}) => <NavLinks key={to} setOpen={setOpen} to={to} linkName={linkName} pathname={pathname} /> )
                 }
-            </ul>
+            </div>
         </div>
     );
 }
@@ -76,11 +76,11 @@ export default function Navbar(){
                 </div>
 
                 <div className=" backdrop-blur-md mr-2 absolute right-3">
-                    <ul className="hidden md:flex md:backdrop-blur-md justify-around space-x-4">
+                    <div className="hidden md:flex md:backdrop-blur-md justify-around space-x-4">
                         {
                             navigationPages.map(({ to, linkName }: { to: string, linkName: string}) => <NavLinks key={to} setOpen={setOpen} to={to} linkName={linkName} pathname={pathname} /> )
                         }
-                    </ul>
+                    </div>
                 </div>
 
 

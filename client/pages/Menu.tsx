@@ -46,9 +46,9 @@ export default function Menu({menu}: {menu: Array<any>}) {
                                     <p className="text-2xl  text-center font-bold pt-3">{category.toUpperCase()}</p>
                                 </div>
                                 <div className="">
-                                    <ul className="flex flex-col flex-wrap sm:items-center">
+                                    <div className="flex flex-col flex-wrap sm:items-center">
                                         {items.map(({name}) => <li className="font-light py-1 ">{name}</li>)}
-                                    </ul>
+                                    </div>
                                     <div className="">
                                         {breakfastPlatters?.map(({platterTitle, breakfastPlatesOptions}) => (
                                             <div className="py-4 flex flex-col justify-center items-center">
@@ -95,7 +95,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
                                     {/* The Rest of The Menu */}
                                     <div className="w-full py-5">
                                         <p className="text-xl text-center font-bold py-2 text-neutral-50">LO DE MAS</p>
-                                        <ul className="w-full flex flex-wrap flex-col sm:items-center py-3">
+                                        <div className="w-full flex flex-wrap flex-col sm:items-center py-3">
                                             {items.map(({name, ingredients, price, sizes}) => (
                                                 <li className="w-full flex flex-col items-center py-4 px-5 md:w-2/3 md:max-w-xl sm:max-w-lg">
                                                     <div className="flex justify-between items-center w-full">
@@ -114,19 +114,19 @@ export default function Menu({menu}: {menu: Array<any>}) {
                                                         </div>
                                                     </div>
                                                     {/* Ingredients Container */}
-                                                    <ul className="flex items-center justify-center w-full">
-                                                        <li className="w-full flex ">
+                                                    <div className="flex items-center justify-center w-full">
+                                                        <div className="w-full flex ">
                                                             <div className="py-2 px-3 w-full backdrop-blur-sm">
                                                                 <p className="text-sm underline underline-offset-1 font-semibold">Ingredients</p>
                                                                 <ul className="flex flex-wrap py-1 px-1 justify-start w-full">
                                                                     {ingredients?.map((ingredient, i) => <li className=" list-inside text-xs font-light ">{(i ? ', ' : '') + ingredient}</li>)}
                                                                 </ul>
                                                             </div>
-                                                        </li>
-                                                    </ul>
+                                                        </div>
+                                                    </div>
                                                 </li>
                                             ))}
-                                        </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +137,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
                         {plattersMenu.map(({category, items}: menuProps) => (
                             <div className="w-full">
                                 <p className="text-2xl text-neutral-50 text-center font-bold py-2">{category.toUpperCase()}</p>
-                                <ul className="py-5 flex flex-col items-center text-center flex-wrap text-neutral-100">
+                                <div className="py-5 flex flex-col items-center text-center flex-wrap text-neutral-100">
                                     {items.map(({name, enchiladaMeatOptions}) => (
                                         <li className="text-xl py-1 ">
                                             <p className="mt-2 text-lg font-light">{name}</p>
@@ -149,7 +149,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
                                             </div>
                                         </li>
                                     ))}
-                                </ul>
+                                </div>
                             </div>
                         ))}
                     </div>
