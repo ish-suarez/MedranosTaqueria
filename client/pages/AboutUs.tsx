@@ -9,7 +9,6 @@ export default function AboutUs() {
         <div className=" w-full">
             <Head>
                 <title>About Medrano's Taqueria</title>
-                <link rel="preload" as="image" href={backgroundPic}></link>
             </Head>
                   {/* Background Image Container */}
             <div className={` fixed -z-10 w-full h-screen`}>

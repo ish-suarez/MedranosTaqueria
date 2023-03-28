@@ -21,14 +21,12 @@ export default function Menu({menu}: {menu: Array<any>}) {
             <Head>
                 <title>Medrano's Menu</title>
                 <meta property="og:title" content="Medrano's Menu" key='title' />
-                <link rel="preload" as="image" href={'/images/taco_truck.avif'}></link>
-
             </Head>
             {/* Background Image Container */}
             <div className="fixed z-0 w-full h-screen">
                 <Image 
                     priority
-                    src={'/images/taco_truck.avif'} 
+                    src={'/images/taco_truck.avif'}
                     className='object-cover brightness-[.35] md:object-fill blur-md' 
                     fill 
                     alt="background picture"

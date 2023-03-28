@@ -14,7 +14,6 @@ export default function Home() {
         <title>Medrano's Taqueria</title>
         <meta property="og:title" content="Medrano's Taqueria" key="title" />
         <meta name="theme-color" content="#2D3142" />
-        <link rel="preload" as="image" href={backgroundPic}></link>
       </Head>
       {/* Background Image Container */}
       <div className={` fixed -z-10 w-full h-screen`}>
