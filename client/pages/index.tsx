@@ -14,7 +14,7 @@ export default function Home() {
         <title>Medrano's Taqueria</title>
         <meta property="og:title" content="Medrano's Taqueria" key="title" />
         <meta name="description" content="Street tacos and more!" />
-        <meta name="keywords" content="Tacos, Quesadillas, Burritos, Street Tacos, Taco Truck, Culture, Caldo, Sopes" />
+        <meta name="keywords" content="Tacos, Quesadillas, Burritos, Street Tacos, Taco Truck, Culture, Caldos, Sopes" />
         <meta name="theme-color" content="#2D3142" />
       </Head>
       {/* Background Image Container */}

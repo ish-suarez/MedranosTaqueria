@@ -28,6 +28,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
                     priority
                     src={'/images/taco_truck.avif'}
                     className='object-cover brightness-[.35] md:object-fill blur-md' 
+                    placeholder="blur"
                     fill 
                     alt="background picture"
                 />
