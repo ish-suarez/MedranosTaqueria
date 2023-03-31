@@ -29,6 +29,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
                     src={'/images/taco_truck.avif'}
                     className='object-cover brightness-[.35] md:object-fill blur-md' 
                     placeholder="blur"
+                    blurDataURL="/images/taco_truck.avif"
                     fill 
                     alt="background picture"
                 />
@@ -138,7 +139,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
                                 <p className="text-2xl text-neutral-50 text-center font-bold py-2">{category.toUpperCase()}</p>
                                 <div className="py-5 flex flex-col items-center text-center flex-wrap text-neutral-100">
                                     {items.map(({name, enchiladaMeatOptions}) => (
-                                        <li className="text-xl py-1 ">
+                                        <div className="text-xl py-1 ">
                                             <p className="mt-2 text-lg font-light">{name}</p>
                                             <div className={`${!enchiladaMeatOptions ? 'hidden' : 'block rounded-md py-1 px-2'}`}>
                                                 <p className="text-sm text-neutral-50 font-bold">Enchilada Meat Options</p>
@@ -146,7 +147,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
                                                     {enchiladaMeatOptions?.map(({enchiladaMeat}) => <li className="w-1/2 text-sm text-center">{enchiladaMeat}</li>)}
                                                 </ul>
                                             </div>
-                                        </li>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
