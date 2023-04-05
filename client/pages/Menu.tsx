@@ -103,7 +103,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
                                                         {/* Sizes and Price */}
                                                         <div className={`w-1/3 ${!sizes ? 'hidden' : 'text-center flex space-x-2 items-center md:justify-end'}`}>
                                                             {sizes?.map(({size, sizePrice}) => (
-                                                                <div className="flex space-x-1 font-light">
+                                                                <div className={`flex space-x-1 font-light ${!sizePrice ? 'hidden' : null}`}>
                                                                     <span>{size}:</span><span className="font-mono">${sizePrice}</span>
                                                                 </div>
                                                             ))}

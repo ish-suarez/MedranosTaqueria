@@ -54,30 +54,30 @@
                     "name": "Quesadilla",
                     "ingredients": ["Lettuce", "Tomato", "Avocado", "Sour Cream"],
                     "sizes": [
-                        { "size": "sm", "sizePrice": 6 },
-                        { "size": "xl", "sizePrice": 10 }
+                        { "size": "sm", "sizePrice": null },
+                        { "size": "xl", "sizePrice": null }
                     ]
                 },
                 {
                     "name": "Burritos",
                     "ingredients": ["Lettuce", "Tomato", "Avocado", "Sour Cream"],
                     "sizes": [
-                        { "size": "sm", "sizePrice": 6 },
-                        { "size": "xl", "sizePrice": 10 }
+                        { "size": "sm", "sizePrice": null },
+                        { "size": "xl", "sizePrice": null }
                     ]
                 },
                 {
                     "name": "Huaraches",
                     "ingredients": ["Lettuce", "Tomato", "Avocado", "Sour Cream", "Queso Freso"],
                     "sizes": [
-                        { "size": "sm", "sizePrice": 6 },
-                        { "size": "xl", "sizePrice": 10 }
+                        { "size": "sm", "sizePrice": null },
+                        { "size": "xl", "sizePrice": null }
                     ]
                 },
                 {
                     "name": "Gorditas",
                     "ingredients": ["Lettuce", "Tomato", "Avocado", "Sour Cream"],
-                    "price": 5
+                    "price": null
                 }
             ],
             "extras": [
