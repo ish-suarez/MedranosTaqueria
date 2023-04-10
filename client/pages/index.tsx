@@ -37,7 +37,7 @@ export default function Home() {
             <div className="flex relative flex-col max-w-md sm:ml-20 xl:max-w-2xl xl:ml-40">
                 <h1 className={`text-5xl md:text-6xl lg:text-7xl text-green-50 font-extrabold`}>Street Tacos</h1>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl ml-14 text-green-50 font-extrabold">Y mucho mas</h2>
-                <div className="flex relative ml-24 w-64 md:w-full text-center space-x-2 my-3 text-lg md:text-xl lg:text-2xl font-bold text-green-50">
+                <div className="flex relative ml-20 w-64 md:w-full text-center space-x-2 my-3 text-lg md:text-xl lg:text-2xl font-bold text-green-50">
                   <Link href={'/Menu'} className="absolute left-0 bg-emerald-800 border-r-2 border-b-2 border-green-50 rounded cursor-pointer transform duration-100 hover:scale-110 hover:z-10 hover:border-none hover:shadow hover:shadow-white py-2 w-1/2">See our menu</Link>
                   <Link href={'/AboutUs'} className="absolute right-0 bg-amber-500 brightness-95 border-r-2 border-b-2 border-amber-100 text-green-900 rounded cursor-pointer transform duration-100 hover:scale-110 hover:border-none hover:shadow hover:shadow-white hover:z-10 py-2 w-1/2">About us</Link>
                 </div>

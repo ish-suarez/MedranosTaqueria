@@ -29,7 +29,7 @@
 
 .content {
     position: absolute;
-    left: 48%; 
+    left: 50%; 
     transform: translateX(-50%);
     width: 100%;
 }
