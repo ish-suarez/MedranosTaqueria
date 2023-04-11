@@ -16,10 +16,6 @@ export default function Home() {
         <meta name="description" content="Street tacos and more!" />
         <meta name="keywords" content="Tacos, Quesadillas, Burritos, Street Tacos, Taco Truck, Culture, Caldos, Sopes" />
         <meta name="theme-color" content="#2D3142" />
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" /> 
       </Head>
       {/* Background Image Container */}
       <div className={` fixed -z-10 w-full h-screen`}>
