@@ -15,6 +15,7 @@ export default function Home() {
         <meta property="og:title" content="Medrano's Taqueria" key="title" />
         <meta property="og:image" content="/images/taco_truck.avif" />
         <meta name="keywords" content="Tacos, Quesadillas, Burritos, Street Tacos, Taco Truck, Culture, Caldos, Sopes, Medrano's, Taqueira" />
+        <meta property="og:description" content=">Medrano's Taquria brings you fresh and authentic flavors from our culture, to you. " />
         <meta name="theme-color" content="#2D3142" />
       </Head>
       {/* Background Image Container */}
