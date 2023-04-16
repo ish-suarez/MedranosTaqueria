@@ -13,8 +13,10 @@ export default function Home() {
       <Head>
         <title>Medrano's Taqueria</title>
         <meta property="og:title" content="Medrano's Taqueria" key="title" />
-        <meta name="description" content="Street tacos and more!" />
-        <meta name="keywords" content="Tacos, Quesadillas, Burritos, Street Tacos, Taco Truck, Culture, Caldos, Sopes" />
+        <meta property="og:image" content="/images/taco_truck.avif" />
+        <meta property="og:url" content="https://medranostaqueria.com" />
+        <meta property="og:type" content="website" />
+        <meta name="keywords" content="Tacos, Quesadillas, Burritos, Street Tacos, Taco Truck, Culture, Caldos, Sopes, Medrano's, Taqueira" />
         <meta name="theme-color" content="#2D3142" />
       </Head>
       {/* Background Image Container */}
@@ -26,7 +28,7 @@ export default function Home() {
           quality={100}
           fill
           placeholder="blur"
-          blurDataURL={'/images/taco_truck.jpeg'}
+          blurDataURL={'/images/taco_truck.avif'}
           alt="Taco Truck"
         />
       </div>
