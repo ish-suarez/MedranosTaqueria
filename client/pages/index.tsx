@@ -13,6 +13,10 @@ export default function Home() {
       <Head>
         <title>Medrano's Taqueria</title>
         <meta property="og:title" content="Medrano's Taqueria" key="title" />
+        <link rel="icon" href="/images/favicons/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png"/>
         <meta property="og:image" content="/images/taco_truck.avif" />
         <meta name="keywords" content="Tacos, Quesadillas, Burritos, Street Tacos, Taco Truck, Culture, Caldos, Sopes, Medrano's, Taqueira" />
         <meta property="og:description" content=">Medrano's Taquria brings you fresh and authentic flavors from our culture, to you. " />
