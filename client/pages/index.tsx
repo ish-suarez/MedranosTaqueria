@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <div className='w-full'>
       <Head>
-        <title>Medrano's Taqueria</title>
         <meta property="og:title" content="Medrano's Taqueria" key="title" />
         <link rel="icon" href="/images/favicons/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
