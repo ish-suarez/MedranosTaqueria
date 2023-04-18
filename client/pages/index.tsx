@@ -10,6 +10,12 @@ const backgroundPic = '/images/taco_truck.avif';
 export default function Home() {
   return (
     <div className='w-full'>
+      <Head>
+        <title>Medrano's Taqueria</title>
+        <meta property="og:title" content="Medrano's Taqueria" key='title' />
+        <meta name="description" content="Medrano's Taquria brings you fresh and authentic flavors from our culture, to you, in Katy, Texas. Your favorite street taco spot." />
+        <meta name="keywords" content="Tacos, Quesadillas, Burritos, Street Tacos, Taco Truck, Culture, Caldos, Sopes, Medrano's, Taqueira" />
+      </Head>
       {/* Background Image Container */}
       <div className={` fixed -z-10 w-full h-screen`}>
         <Image

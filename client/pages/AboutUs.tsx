@@ -8,7 +8,9 @@ export default function AboutUs() {
     return (
         <div className=" w-full">
             <Head>
-                <title>About Medrano's Taqueria</title>
+                <title>Medrano's Taqueria - About Us</title>
+                <meta name="description" content="Street Tacos, Enchiladas, Breakfast and more! Come see us in Katy, Texas." />
+                <meta property="og:title" content="Medrano's Taqueria - About Us" key='title' />
             </Head>
                   {/* Background Image Container */}
             <div className={` fixed -z-10 w-full h-screen`}>
