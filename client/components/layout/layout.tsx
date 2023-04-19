@@ -10,10 +10,10 @@ type Props = {
 export default function Layout({children}: Props) {
     return (
         <div className="w-full subpixel-antialiased">
-            <main className="w-full">
+            <div className="w-full">
                 <Navbar />
                 {children}
-            </main>
+            </div>
         </div>
     )
 }
