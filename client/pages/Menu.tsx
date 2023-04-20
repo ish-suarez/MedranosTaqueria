@@ -20,6 +20,7 @@ export default function Menu({menu}: {menu: Array<any>}) {
         <div>
             <Head>
                 <title>Medrano's Menu</title>
+                <meta property="description" content="Our savory menu is loaded with authentic Mexican cuisine for breakfast, lunch and dinner. We bring our culture to you in Katy, Texas." />
                 <meta property="og:title" content="Medrano's Menu" key='title' />
             </Head>
             {/* Background Image Container */}
