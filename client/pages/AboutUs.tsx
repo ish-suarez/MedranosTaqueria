@@ -11,6 +11,8 @@ export default function AboutUs() {
                 <title>Medrano's Taqueria - About Us</title>
                 <meta property="og:title" content="Medrano's Taqueria - About Us" key='title' />
                 <meta name="description" content="Street Tacos, Enchiladas, Breakfast, Caldos, Tortas and so much more! Come visit us in Katy, Texas." />
+                <meta name="og:description" content="Street Tacos, Enchiladas, Breakfast, Caldos, Tortas and so much more! Come visit us in Katy, Texas." />
+
             </Head>
                   {/* Background Image Container */}
             <div className={` fixed -z-10 w-full h-screen`}>
