@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Head from 'next/head';
 import { getMenu } from '../lib/menuData'
 import { menuProps } from "../lib/interface";
@@ -23,18 +22,6 @@ export default function Menu({menu}: {menu: Array<any>}) {
                 <meta property="description" content="Our savory menu is loaded with authentic Mexican cuisine for breakfast, lunch and dinner. We bring our culture to you in Katy, Texas." />
                 <meta property="og:title" content="Medrano's Menu" key='title' />
             </Head>
-            {/* Background Image Container */}
-            <div className="fixed z-0 w-full h-screen">
-                <Image 
-                    priority
-                    src={'/images/taco_truck.avif'}
-                    className='object-cover brightness-[.35] md:object-fill blur-md' 
-                    placeholder="blur"
-                    blurDataURL="/images/taco_truck.avif"
-                    fill 
-                    alt="background picture"
-                />
-            </div>
             {/* Menu container */}
             <div className="w-full pt-[20vh] sm:pt-[25vh] md:pt-[20vh] z-40 absolute">
                 <p className="text-4xl text-neutral-50 text-center font-extrabold py-2 pb-6 z-20">Menu</p> 

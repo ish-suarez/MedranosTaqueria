@@ -5,8 +5,6 @@ import Footer from "../components/Footer"
 import styles from '../styles/Home.module.css'
 import {menuPreview, homePhotos} from '../lib/menuData'
 
-const backgroundPic = '/images/taco_truck.avif';
-
 export default function Home() {
   return (
     <div className='w-full'>
@@ -16,19 +14,6 @@ export default function Home() {
         <meta name="description" content="Medrano's Taquria brings you fresh and authentic flavors from our culture, to you, in Katy, Texas. Your favorite street taco spot. Monday - Saturday: 6AM - 10PM" />
         <meta name="keywords" content="Tacos, Quesadillas, Burritos, Street Tacos, Taco Truck, Culture, Caldos, Sopes, Medrano's, Taqueira" />
       </Head>
-      {/* Background Image Container */}
-      <div className={` fixed -z-10 w-full h-screen`}>
-        <Image
-          priority
-          className=" opacity-95 brightness-50 blur-md object-cover md:object-fill"
-          src={backgroundPic as string}
-          quality={100}
-          fill
-          placeholder="blur"
-          blurDataURL={'/images/taco_truck.avif'}
-          alt="Taco Truck"
-        />
-      </div>
       {/* Home page Content */}
       <div className={`flex flex-col items-center ${styles.content}`}>
         <div className=" mt-[20vh] sm:mt-[20vh] py-10 flex flex-col">

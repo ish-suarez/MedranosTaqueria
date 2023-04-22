@@ -14,20 +14,6 @@ export default function AboutUs() {
                 <meta name="og:description" content="Street Tacos, Enchiladas, Breakfast, Caldos, Tortas and so much more! Come visit us in Katy, Texas." />
 
             </Head>
-                  {/* Background Image Container */}
-            <div className={` fixed -z-10 w-full h-screen`}>
-                <Image
-                priority
-                className=" opacity-95 brightness-50 blur-md object-cover md:object-fill"
-                src={backgroundPic as string}
-                quality={100}
-                fill
-                placeholder="blur"
-                blurDataURL={'/images/taco_truck.jpeg'}
-                alt="Taco Truck"
-                />
-            </div>
-
             <div className="pt-28 sm:pt-40 md:pt-36 w-full flex flex-col justify-center items-center absolute">
                 <div className="w-full flex flex-col items-center lg:flex-row lg:max-w-6xl lg:bg-neutral-800/80 lg:backdrop-blur lg:justify-end lg:mt-20 lg:mb-40 2xl:w-4/6 2xl:my-20">
                     <section className=" text-neutral-50 flex justify-center flex-col p-3 w-full bg-neutral-800/80 sm:max-w-xl sm:rounded-t-md md:max-w-xl md:px-5 lg:px-20 lg:bg-transparent xl:px-5 ">
