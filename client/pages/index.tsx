@@ -13,7 +13,7 @@ export default function Home() {
       <Head>
         <title>Medrano's Taqueria</title>
         <meta property="og:title" content="Medrano's Taqueria" key='title' />
-        <meta name="description" content="Medrano's Taquria brings you fresh and authentic flavors from our culture, to you, in Katy, Texas. Your favorite street taco spot." />
+        <meta name="description" content="Medrano's Taquria brings you fresh and authentic flavors from our culture, to you, in Katy, Texas. Your favorite street taco spot. Monday - Saturday: 6AM - 10PM" />
         <meta name="keywords" content="Tacos, Quesadillas, Burritos, Street Tacos, Taco Truck, Culture, Caldos, Sopes, Medrano's, Taqueira" />
       </Head>
       {/* Background Image Container */}
