@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Head from "next/head";
 import Image from 'next/image';
 import Navbar from "../navbar";
 const backgroundPic = '/images/taco_truck.avif';
