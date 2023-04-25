@@ -19,7 +19,7 @@ export default function AboutUs() {
                     <section className=" text-neutral-50 flex justify-center flex-col p-3 w-full bg-neutral-800/80 sm:max-w-xl sm:rounded-t-md md:max-w-xl md:px-5 lg:px-20 lg:bg-transparent xl:px-5 ">
                         <div className=" flex flex-col py-5">
                             <h3 className="  text-neutral-50 font-bold">About Us</h3>
-                            <p className="font-light text-center md:px-10">Medrano's Taquria brings you fresh and authentic flavors from our culture, to you. </p>
+                            <p className="font-light text-center md:px-10">Medrano's Taqueria brings you fresh and authentic flavors from our culture, to you. </p>
                         </div>
                         <div className="flex flex-col py-5">
                             <h4 className="text-neutral-50 font-bold">Days and Hours</h4>
