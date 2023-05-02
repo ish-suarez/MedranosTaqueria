@@ -21,6 +21,8 @@ export default function Menu({menu}: {menu: Array<any>}) {
                 <title>Medrano's Menu</title>
                 <meta name="description" content="Our savory menu is loaded with authentic Mexican cuisine for breakfast, lunch and dinner. We bring our culture to you in Katy, Texas." />
                 <meta property="og:title" content="Medrano's Menu" key='title' />
+        <link rel="canonical" href="https://medranostaqueria.com/Menu" />
+
             </Head>
             {/* Menu container */}
             <div className="w-full pt-[20vh] sm:pt-[25vh] md:pt-[20vh] z-40 absolute">

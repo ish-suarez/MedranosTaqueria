@@ -12,6 +12,8 @@ export default function AboutUs() {
                 <meta property="og:title" content="Medrano's Taqueria - About Us" key='title' />
                 <meta name="description" content="Enjoy the flavors of our culture in Katy, Texas." />
                 <meta name="og:description" content="Street Tacos, Enchiladas, Breakfast, Caldos, Tortas and so much more! Come visit us in Katy, Texas." />
+                <link rel="canonical" href="https://medranostaqueria.com/AboutUs" />
+
 
             </Head>
             <div className="pt-28 sm:pt-40 md:pt-36 w-full flex flex-col justify-center items-center absolute">
